@@ -1,0 +1,40 @@
+@import "../../../constantes/styles.constantes.scss";
+
+.container{
+    position: absolute;
+}
+
+.bannerContainer{
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.colorModeSwitcherContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flagsContainer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flags{
+    cursor: pointer;
+    margin: 7px;
+    border-radius: 50%;
+    transition: 0.2s ease;
+}
+
+.flags:hover{
+    transform: scale(1.05);
+}
+
+.selected{
+    border: 2px solid $portfolio-color-palette;
+}

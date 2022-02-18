@@ -1,0 +1,96 @@
+@import './constantes/styles.constantes.scss';
+
+/*
+==========================================================
+                          GENERAL
+==========================================================
+*/
+
+/*
+==========================================================
+                          HEADER
+==========================================================
+*/
+
+/*
+==========================================================
+                          BODY
+==========================================================
+*/
+
+.headerContentContainer, #aboutContainer, #skillsContainer{
+    height: 936px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#skillsContainer>h2, #resume>h2{
+    transition: 0.5s ease;
+}
+
+#skillsContainer>h2:hover, #resume>h2:hover{
+    color: $portfolio-color-palette;
+}
+
+.nightMode{
+    background-color: $portfolio-color-primary;
+    color: $portfolio-color-secondary;
+}
+
+.dayMode{
+    background-color: $portfolio-color-secondary;
+    color: $portfolio-color-primary;
+}
+
+.titleBright{
+    color: $portfolio-color-secondary;
+}
+
+/*
+==========================================================
+                      MEDIA QUERIES
+==========================================================
+*/
+
+/*
+==========================TABLET==========================
+*/
+
+
+
+/*
+==========================DESKTOP==========================
+*/
+
+@media screen and (min-width: 992px) {
+    .bannerContainer>*{
+        margin-right: 20px;
+    }
+
+    #aboutContainer{
+        flex-direction: row !important;
+        justify-content: space-around;
+    }
+    
+    .informationContainer{
+        margin: 0 !important;
+        width: 650px !important;
+    }
+
+    #skillsContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0 0 150px 0;
+    }
+
+    #skillsContainer>h2{
+        margin-bottom: 100px;
+    }
+
+    .skillsIconsContainer{
+        margin: 0 25% !important;
+    }
+}

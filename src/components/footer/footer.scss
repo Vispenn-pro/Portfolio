@@ -1,0 +1,45 @@
+@import "../../constantes/styles.constantes.scss";
+
+#footerContainer{
+    border-radius: 50%;
+    height: 120px;
+    transition: 0.5s ease;
+}
+
+.footerContainerDark{
+    border-top: solid 5px $portfolio-color-secondary;
+}
+
+.footerContainerBright{
+    border-top: solid 5px $portfolio-color-primary;
+}
+
+#footerContainer:hover{
+    border-top: solid 5px $portfolio-color-palette;
+}
+
+#footerContainer>a>span{
+    margin: 0 15px;
+    font-size: 2rem;
+}
+
+#footerContainer>a{
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+#footerContainer>a:hover{
+    color: $portfolio-color-palette;
+}
+
+.darkLink{
+    color: $portfolio-color-secondary;
+}
+
+.brightLink{
+    color: $portfolio-color-primary;
+}
+
+.credits{
+    font-size: 0.65rem;
+}

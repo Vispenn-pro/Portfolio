@@ -1,0 +1,94 @@
+@import "../../constantes/styles.constantes.scss";
+
+#aboutContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.polaroidEffect{
+    padding-top: 15px;
+    width: 287px;
+    height: 365px;
+    background-color: $portfolio-color-secondary;
+    -webkit-box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.65); 
+    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.65);
+}
+
+#aboutContainer img{
+    filter: opacity(0.90);
+    border: 2px solid $portfolio-color-secondary;
+    border-radius: 2%;
+}
+
+.techLogos img{
+    margin: 3% 2%;
+}
+
+.informationContainer{
+    margin-top: 42px;
+    height: 406px;
+    width: 342px;
+    margin: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+    overflow: hidden;
+    background-color:  rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.04);
+}
+
+.informationBanner{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    background: linear-gradient(#eee, #bbb);
+    padding-left: 3px;
+    .button{
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        border: 1px solid rgba(0,0,0,0.08);
+        margin: 0 3px;
+        &.close{
+          background-color: #e15f60;
+          &:hover{
+            background-color: darken(#e15f60, 5);
+          }
+        }
+        &.minimize{
+          background-color: #edbb52;
+           &:hover{
+            background-color: darken(#edbb52, 5);
+          }
+        }
+        &.expand{
+          background-color: #1fae53;
+           &:hover{
+            background-color: darken(#1fae53, 5);
+          }
+        }
+      }
+}
+
+.informationTextContainer{
+    margin: auto;
+    color: $portfolio-color-primary;
+    font-size: 0.85rem;
+    height: calc(100% - 24px);
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.darkAboutText{
+    color: $portfolio-color-secondary;
+}
+
+.brightAboutText{
+    color: $portfolio-color-primary;
+}

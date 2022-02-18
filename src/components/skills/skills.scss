@@ -1,0 +1,46 @@
+@import "../../constantes/styles.constantes.scss";
+
+.skillsIconsContainer{
+    margin: 25% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 50%;
+}
+
+.skillsIconsDark{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 5%;
+    border: 2px solid $portfolio-color-secondary;
+    background-color: $portfolio-color-primary;
+    transition: 0.5s ease;
+}
+
+.skillsIconsBright{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 5%;
+    border: 2px solid $portfolio-color-primary;
+    background-color: $portfolio-color-secondary;
+    transition: 0.5s ease;
+}
+
+.skillsIconsDark:hover, .skillsIconsBright:hover{
+    transform: scale(1.05);
+}
+
+.skillsIconsDark>p, .skillsIconsBright>p{
+    height: 25px;
+    margin: 0;
+}
