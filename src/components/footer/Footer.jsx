@@ -8,7 +8,7 @@ const Footer = () => {
             <a href="https://www.linkedin.com/in/maxime-bourdin-pro" target="_blank" rel="noreferrer noopener" className="darkLink footerLink">
                 <span className="bi bi-linkedin"></span>
             </a>
-            <a href="https://github.com/Vispenn-pro/Portoflio" target="_blank" className="darkLink footerLink">
+            <a href="https://github.com/Vispenn-pro/Portfolio" target="_blank" className="darkLink footerLink">
                 <span className="bi bi-github"></span>
             </a>
             <a href="https://www.instagram.com/vispenn/" target="_blank" rel="noreferrer noopener" className="darkLink footerLink">
