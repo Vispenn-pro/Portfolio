@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import './about.scss';
-import profilePicture from "../../assets/img/profilePicture.jpeg";
+import profilePicture from "../../assets/img/profilePicture.png";
 import reactLogo from "../../assets/img/reactLogo.png";
 import javaLogo from "../../assets/img/javaLogo.png";
 import postgresqlLogo from "../../assets/img/postgresqlLogo.png";
