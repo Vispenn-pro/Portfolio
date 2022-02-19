@@ -45,6 +45,7 @@ const Fonctionnalites = () => {
     }
 
     const handleChange = () => {
+        const wholeContainer = document.querySelector("body");
         const bodyContainer = document.querySelector("#bodyContainer");
         const aboutContainer = document.querySelector("#aboutContainer");
         const informationBanner = document.querySelector(".informationBanner");
@@ -54,6 +55,8 @@ const Fonctionnalites = () => {
         const footerContainer = document.querySelector("#footerContainer");
         const links = document.querySelectorAll(".footerLink");
 
+        wholeContainer.classList.toggle("dayMode");
+        wholeContainer.classList.toggle("nightMode");
         bodyContainer.classList.toggle("dayMode");
         bodyContainer.classList.toggle("nightMode");
         aboutContainer.classList.toggle("aboutContainerBright");
