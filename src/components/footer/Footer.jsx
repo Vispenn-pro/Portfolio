@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { useState } from "react";
+import { TextContext } from "../..";
 import "./footer.scss";
 
-const Footer = () => {
+const Footer = ({ language }) => {
+
+    const text = useContext(TextContext);
+    const [inspiration, setInspiration] = useState("");
+
+    useEffect(() => {
+        if(language === "english"){
+            setInspiration(text.english.inspirationText);
+        }
+        else if(language === "français"){
+            setInspiration(text.french.inspirationText);
+        }
+    }, [language, text.english.inspirationText, text.french.inspirationText])
+
     return(
         <footer id="footerContainer" className="footerContainerDark">
             <p></p>
             <a href="https://www.linkedin.com/in/maxime-bourdin-pro" target="_blank" rel="noreferrer noopener" className="darkLink footerLink">
                 <span className="bi bi-linkedin"></span>
             </a>
-            <a href="https://github.com/Vispenn-pro/Portfolio" target="_blank" className="darkLink footerLink">
+            <a href="https://github.com/Vispenn-pro/Portfolio" target="_blank" rel="noreferrer noopener" className="darkLink footerLink">
                 <span className="bi bi-github"></span>
             </a>
             <a href="https://www.instagram.com/vispenn/" target="_blank" rel="noreferrer noopener" className="darkLink footerLink">
@@ -18,7 +33,7 @@ const Footer = () => {
             <a href="mailto: maxime.bourdin.pro@gmail.com" className="darkLink footerLink">maxime.bourdin.pro@gmail.com</a>
             <br />
             <a className="credits darkLink footerLink" href="https://dorota1997.github.io/react-frontend-dev-portfolio/" target="_blank" rel="noreferrer noopener">
-                Inspiration for this portfolio page
+                {inspiration}
             </a>
         </footer>
     )
