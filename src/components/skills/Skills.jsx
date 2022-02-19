@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./skills.scss";
 import reactLogo from "../../assets/img/reactLogo.png";
 import javaLogo from "../../assets/img/javaLogo.png";
@@ -15,11 +15,25 @@ import postmanLogo from "../../assets/img/postmanLogo.png";
 import gitLogo from "../../assets/img/gitLogo.png";
 import jenkinsLogo from "../../assets/img/jenkinsLogo.png";
 import jiraLogo from "../../assets/img/jiraLogo.png";
+import { TextContext } from "../..";
 
-const Skills = () => {
+const Skills = ({ language }) => {
+
+    const text = useContext(TextContext);
+    const [title, setTitle] = useState("")
+
+    useEffect(() => {
+        if(language === "english"){
+            setTitle(text.english.titles.skillsTitle);
+        }
+        else if(language === "français"){
+            setTitle(text.french.titles.skillsTitle);
+        }
+    }, [language, text.english.titles.skillsTitle, text.french.titles.skillsTitle])
+
     return(
         <section id="skillsContainer">
-            <h2>Skills</h2>
+            <h2>{title}</h2>
             <div id="skillsIconsContainer" className="skillsIconsContainer">
                 <div className="skillsIconsDark skillsIcons">
                     <img alt="logo react" src={reactLogo} height="55" width="45" />

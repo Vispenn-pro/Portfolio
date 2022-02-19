@@ -7,15 +7,22 @@ const Resume = ({ language }) => {
 
     const text = useContext(TextContext);
     const [experiences, setExperiences] = useState([]);
+    const [title, setTitle] = useState("");
 
     useEffect(() => {
-        language === "english" && setExperiences(Object.values(text.english.resumeText));
-        language === "français" && setExperiences(Object.values(text.french.resumeText));
-    }, [language, text.english.resumeText, text.french.resumeText])
+        if(language === "english"){
+            setExperiences(Object.values(text.english.resumeText));
+            setTitle(text.english.titles.resumeTitle);
+        }
+        else if(language === "français"){
+            setExperiences(Object.values(text.french.resumeText));
+            setTitle(text.french.titles.resumeTitle);
+        }
+    }, [language, text.english.resumeText, text.french.resumeText, text.english.titles.resumeTitle, text.french.titles.resumeTitle])
 
     return(
         <section id="resume">
-            <h2>Resume</h2>
+            <h2>{title}</h2>
             <div className="resumeContainer">
                 {experiences.map((item, index) => 
                 index % 2 === 0 ?

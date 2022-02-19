@@ -96,9 +96,9 @@ const Fonctionnalites = () => {
             </div>
             <HeaderContent headerText={headerText}/>
             <About language={language}/>
-            <Skills />
+            <Skills language={language}/>
             <Resume language={language}/>
-            <Footer />
+            <Footer language={language}/>
         </div>
     )
 }
