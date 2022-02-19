@@ -1,7 +1,8 @@
 @import "../../constantes/styles.constantes.scss";
 
 #footerContainer{
-    border-radius: 25%;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
     height: 120px;
     transition: 0.5s ease;
 }
