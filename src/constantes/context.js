@@ -24,7 +24,7 @@ export const text = {
                 title: "Développeur Full-Stack en alternance",
                 workplace: "MAIF - Niort / 3W Academy - Paris",
                 dates: "2021 - Aujourd'hui",
-                description: "En reconversion en tant que développeur Full-stack à la 3W Academy spécialités React et NodeJS, j'ai été embauché par la MAIF pour parfaire mon apprentissage dans le cadre d'une alternance. J'ai pu y développer les nombreuses compétences mentionnés plus haut et j'ai pu découvrir le cadre d'une structure d'entreprise au sein d'une équipe de développement dans un projet de gestion de sourcing.",
+                description: "En reconversion en tant que développeur Full-stack à la 3W Academy spécialités React et NodeJS, j'ai été embauché par la MAIF pour parfaire mon apprentissage dans le cadre d'une alternance. J'ai pu y développer les nombreuses compétences mentionnées plus haut et j'ai pu découvrir le cadre d'une structure d'entreprise au sein d'une équipe de développement dans un projet de gestion de sourcing.",
             },
         },
         inspirationText: "Inspiration pour cette page portfolio",
