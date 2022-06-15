@@ -1,0 +1,19 @@
+@import 'src/constantes/styles.constantes';
+
+.headerContainer h1{
+    width: auto;
+}
+
+.titleContent::before{
+    margin-top: 150px;
+    font-size: 5rem;
+}
+
+.titleContent{
+    transition: 0.5s ease;
+    font-size: 2rem;
+}
+
+.titleContent:hover{
+    color: $portfolio-color-palette; 
+}

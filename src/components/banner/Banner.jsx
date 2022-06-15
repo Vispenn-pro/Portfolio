@@ -1,0 +1,104 @@
+import britishFlag from "../../assets/img/britishFlag.ico";
+import frenchFlag from "../../assets/img/frenchFlag.ico";
+import Switch from "@mui/material/Switch";
+import React, { useContext } from "react";
+import AppContext from "../../context/AppContext";
+
+const Banner = () => {
+  const { setLanguage, colorMode, setColorMode } = useContext(AppContext);
+
+  const handleClickFrenchFlag = () => {
+    const frenchFlag = document.querySelector("#frenchFlag");
+    const britishFlag = document.querySelector("#britishFlag");
+
+    if (britishFlag.classList.contains("selected")) {
+      britishFlag.classList.remove("selected");
+      frenchFlag.classList.add("selected");
+      setLanguage("français");
+    }
+  };
+
+  const handleClickBritishFlag = () => {
+    const frenchFlag = document.querySelector("#frenchFlag");
+    const britishFlag = document.querySelector("#britishFlag");
+
+    if (frenchFlag.classList.contains("selected")) {
+      frenchFlag.classList.remove("selected");
+      britishFlag.classList.add("selected");
+      setLanguage("english");
+    }
+  };
+
+  const handleChange = () => {
+    const wholeContainer = document.querySelector("body");
+    const bodyContainer = document.querySelector("#bodyContainer");
+    const aboutContainer = document.querySelector("#aboutContainer");
+    const informationBanner = document.querySelector(".informationBanner");
+    const informationTextContainer = document.querySelector(
+      "#informationTextContainer"
+    );
+    const skillsContainer = document.querySelector("#skillsContainer");
+    const skillsIcons = document.querySelectorAll(".skillsIcons");
+    const footerContainer = document.querySelector("#footerContainer");
+    const links = document.querySelectorAll(".footerLink");
+
+    wholeContainer.classList.toggle("dayMode");
+    wholeContainer.classList.toggle("nightMode");
+    bodyContainer.classList.toggle("dayMode");
+    bodyContainer.classList.toggle("nightMode");
+    aboutContainer.classList.toggle("aboutContainerBright");
+    aboutContainer.classList.toggle("aboutContainerDark");
+    informationBanner.classList.toggle("informationBannerBright");
+    informationBanner.classList.toggle("informationBannerDark");
+    informationTextContainer.classList.toggle("brightAboutText");
+    informationTextContainer.classList.toggle("darkAboutText");
+    skillsContainer.classList.toggle("skillsContainerBright");
+    skillsContainer.classList.toggle("skillsContainerDark");
+    for (let i = 0; i < skillsIcons.length; i++) {
+      skillsIcons[i].classList.toggle("skillsIconsBright");
+      skillsIcons[i].classList.toggle("skillsIconsDark");
+    }
+    for (let i = 0; i < links.length; i++) {
+      links[i].classList.toggle("brightLink");
+      links[i].classList.toggle("darkLink");
+    }
+    footerContainer.classList.toggle("footerContainerBright");
+    footerContainer.classList.toggle("footerContainerDark");
+    colorMode === "dark" ? setColorMode("bright") : setColorMode("dark");
+  };
+
+  return (
+    <div className="bannerContainer">
+      <div className="flagsContainer">
+        <img
+          onClick={handleClickBritishFlag}
+          id="britishFlag"
+          className="flags selected"
+          alt="British flag"
+          height="24"
+          width="24"
+          src={britishFlag}
+        />
+        <img
+          onClick={handleClickFrenchFlag}
+          id="frenchFlag"
+          className="flags"
+          alt="French flag"
+          height="24"
+          width="24"
+          src={frenchFlag}
+        />
+      </div>
+      <div className="colorModeSwitcherContainer">
+        {colorMode === "dark" ? (
+          <span className="bi bi-moon"></span>
+        ) : (
+          <span className="bi bi-brightness-high-fill"></span>
+        )}
+        <Switch onChange={handleChange} />
+      </div>
+    </div>
+  );
+};
+
+export default Banner;

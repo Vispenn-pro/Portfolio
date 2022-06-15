@@ -33,11 +33,13 @@
 }
 
 .nightMode{
+    transition: 0.5s ease;
     background-color: $portfolio-color-primary;
     color: $portfolio-color-secondary;
 }
 
 .dayMode{
+    transition: 0.5s ease;
     background-color: $portfolio-color-secondary;
     color: $portfolio-color-primary;
 }
