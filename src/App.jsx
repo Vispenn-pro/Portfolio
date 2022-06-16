@@ -5,8 +5,11 @@ import {
   text,
   languages,
   colorModes,
+  weathers,
 } from "./constantes/application.constantes";
 import MainPage from "./views/MainPage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import WeatherApp from "./views/WeatherApp";
 
 const App = () => {
   const [language, setLanguage] = useState(languages.english);
@@ -18,12 +21,18 @@ const App = () => {
     setLanguage,
     colorMode,
     setColorMode,
+    weathers,
   };
 
   return (
-    <AppContext.Provider value={donneesReferentielles} className="App">
-      <MainPage />
-    </AppContext.Provider>
+    <Router>
+      <AppContext.Provider value={donneesReferentielles} className="App">
+        <Routes>
+          <Route exact path="/" element={<MainPage />} />
+          <Route exact path="/weather_app" element={<WeatherApp />} />
+        </Routes>
+      </AppContext.Provider>
+    </Router>
   );
 };
 

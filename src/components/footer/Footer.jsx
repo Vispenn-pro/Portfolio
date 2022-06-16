@@ -35,7 +35,7 @@ const Footer = () => {
         <span className="bi bi-github"></span>
       </a>
       <a
-        href="https://www.instagram.com/vispenn/"
+        href="src/components/footer/Footer"
         target="_blank"
         rel="noreferrer noopener"
         className="darkLink footerLink"
@@ -52,7 +52,7 @@ const Footer = () => {
       <br />
       <a
         className="credits darkLink footerLink"
-        href="https://dorota1997.github.io/react-frontend-dev-portfolio/"
+        href="src/components/footer/Footer"
         target="_blank"
         rel="noreferrer noopener"
       >

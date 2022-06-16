@@ -78,3 +78,32 @@ export const colorModes = {
   dark: "dark",
   bright: "bright",
 };
+
+export const weathers = [
+  {
+    value: "#d44d4d",
+    label: "hot",
+  },
+  {
+    value: "#f19f61",
+    label: "warm",
+  },
+  {
+    value: "#f3e86b",
+    label: "average",
+  },
+  {
+    value: "#8de87b",
+    label: "chill",
+  },
+  {
+    value: "#74f2db",
+    label: "cold",
+  },
+];
+
+export const weatherIcons = {
+  color: "rgb(29, 29, 29)",
+  size: 40,
+  animate: true,
+};
