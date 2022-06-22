@@ -35,7 +35,7 @@ const Footer = () => {
         <span className="bi bi-github"></span>
       </a>
       <a
-        href="src/components/footer/Footer"
+        href="https://www.instagram.com/vispenn/"
         target="_blank"
         rel="noreferrer noopener"
         className="darkLink footerLink"
@@ -48,15 +48,6 @@ const Footer = () => {
         className="darkLink footerLink"
       >
         maxime.bourdin.pro@gmail.com
-      </a>
-      <br />
-      <a
-        className="credits darkLink footerLink"
-        href="src/components/footer/Footer"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        {inspiration}
       </a>
     </footer>
   );
